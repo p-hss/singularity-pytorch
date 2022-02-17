@@ -1,0 +1,37 @@
+BootStrap: docker
+From: pytorch/pytorch:1.9.1-cuda11.1-cudnn8-runtime
+
+%help
+	Software stack with GPU-enabled Pytorch
+
+%post
+	apt-get update && apt-get install -y build-essential
+	pip install "dask[complete]" 
+	pip install -U scikit-learn
+	pip install basemap
+	pip install captum
+	pip install ipywidgets
+	pip install jupyterlab
+	pip install jupyterlab_vim
+	pip install netCDF4
+	pip install nodejs
+	pip install numba
+	pip install pysteps
+	pip install pytorch-lightning
+	pip install scipy
+	pip install tensorboard
+	pip install tqdm
+	pip install xclim
+	pip install zarr
+   	pip install matplotlib
+   	pip install numpy
+   	pip install panda
+   	pip install xarray
+
+%environment
+	export LC_ALL=C
+
+%runscript
+
+%labels
+	Author philipp.hess

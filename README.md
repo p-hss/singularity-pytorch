@@ -21,7 +21,7 @@ Or download the ``stack.sif`` image file from Cloud Library with:
 singularity pull --arch amd64 library://phess/pytorch-stack/stack:latest
 ```
 
-Execute test.py script with using the container with Nvidia drivers enabled:
+Execute ``test.py`` script with using the container with NVIDIA drivers enabled:
 
 ```
 singularity exec --nv ./stack.sif python test.py

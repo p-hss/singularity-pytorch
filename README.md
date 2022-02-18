@@ -37,8 +37,8 @@ Just add/remove packages in the stack.def file.
 Check that the CUDA verion in the Docker image is compatible with the hardware. If not, change the CUDA version in the stack.def file.
 
 ### File systems
-Some file system paths might not be visible for the container on the host system, e.g. such as /p/tmp/
-These can be added with the --bind flag:
+Some file system paths might not be visible for the container on the host system, e.g. such as ``/p/tmp/``.
+These can be added with the ``--bind`` flag:
 
 ```
 singularity exec --nv --bind /p/tmp/ ./stack.sif python test.py
@@ -50,7 +50,7 @@ Follow the instructions [here](https://sylabs.io/guides/3.5/user-guide/cloud_lib
 ```
 singularity push stack.sif library://<your name>/<container name>:version
 ```
-Typically ``version'' is named ``latest''. To pull a container from the cloud use:
+Typically ``version`` is named ``latest``. To pull a container from the cloud use:
 
 ```
 singularity pull stack.sif library://<your name>/<container name>:version

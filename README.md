@@ -1,7 +1,7 @@
 # Singularity container with GPU-configured Pytorch for climate and weather applications
 
 ## Description
-An example showing how to use a Singularity container with GPU-configured Pytorch and a bunch of additional python packages.
+An example showing how to use a Singularity container with GPU-configured Pytorch and a bunch of additional python packages that are useful for climate and weather applications.
 
 ## Installation
 

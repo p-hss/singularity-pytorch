@@ -31,3 +31,11 @@ singularity exec --nv ./stack.sif jupyter lab
 
 Just add/remove packages in the stack.def file.
 
+## Notes
+Some filesystem paths might not be visible for the container on the host system, e.g. such as /p/tmp/
+These can be added with the --bind flag:
+
+```
+singularity exec --nv --bind /p/tmp/ ./stack.sif python test.py
+```
+

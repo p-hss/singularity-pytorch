@@ -5,7 +5,7 @@ An example showing how to build a Singularity container with GPU-configured Pyto
 
 ## Installation
 
-Follow the instructions [here] (https://singularity-tutorial.github.io/) to install Singlarity and further tutorials.
+Follow the instructions [here](https://singularity-tutorial.github.io/) to install Singlarity and further tutorials.
 
 ## How to use
 

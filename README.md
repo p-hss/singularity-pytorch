@@ -7,12 +7,18 @@ An example showing how to use a Singularity container with GPU-configured Pytorc
 
 Follow the instructions [here](https://singularity-tutorial.github.io/) to install Singlarity and to find further tutorials.
 
+
 ## How to use
 
-Build a container:
+Build a container from the ``stack.def`` definition file:
 
 ```
 sudo singularity build --force stack.sif stack.def
+```
+
+Or download the ``stack.sif`` image file from Cloud Library with:
+```
+singularity pull --arch amd64 library://phess/pytorch-stack/stack:latest
 ```
 
 Execute test.py script with using the container with Nvidia drivers enabled:

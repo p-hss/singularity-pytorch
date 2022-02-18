@@ -1,7 +1,7 @@
 # Build a Singularity container with GPU-configured Pytorch
 
 ## Description
-An example to show how to build a Singularity container with GPU-configured Pytorch and a bunch of additional python packages.
+An example showing how to build a Singularity container with GPU-configured Pytorch and a bunch of additional python packages.
 
 ## Installation
 

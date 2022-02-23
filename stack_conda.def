@@ -1,0 +1,61 @@
+BootStrap: docker
+From: pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
+
+%help
+	Software stack build on GPU-configured Pytorch Docker image
+
+
+%labels
+	AUTHOR_NAME Philipp Hess
+	AUTHOR_EMAIL hess@pik-potsdam.de
+	VERSION 1.0
+
+
+%environment
+	export LC_ALL=C
+
+%post
+	apt-get update && apt-get install -y build-essential
+
+	# install conda
+	apt-get install -y wget
+	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+	bash ~/miniconda.sh -b -p $HOME/miniconda
+	conda init
+	conda update conda
+
+	# install and activate conda
+	conda create --name myenv
+
+	# install packages
+	conda install -c conda-forge basemap 
+	conda install -c conda-forge ipywidgets
+	conda install -c conda-forge jupyterlab
+	conda install -c conda-forge nodejs 
+	conda install -c conda-forge numpy 
+	conda install -c conda-forge pandas
+	conda install -c conda-forge pysteps 
+	conda install -c conda-forge tensorboard 
+	conda install -c conda-forge tqdm 
+	conda install -c conda-forge xarray
+	conda install -c conda-forge xclim
+	conda install -c conda-forge zarr
+	conda install captum -c pytorch
+	conda install dask
+	conda install matplotlib
+	conda install netcdf4 
+	conda install numba
+	conda install scikit-image
+	conda install scikit-learn
+	conda install scipy 
+	conda install seaborn
+ 	conda install pandas
+ 	conda install xarray
+	
+	conda install pip 
+	pip install jupyterlab_vim
+	pip install pytorch-lightning
+  
+
+%runscript
+

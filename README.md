@@ -10,10 +10,10 @@ Follow the instructions [here](https://singularity-tutorial.github.io/) to insta
 
 ## How to use
 
-Build a container from the ``stack.def`` definition file:
+Build a container from the ``stack_conda.def`` definition file:
 
 ```
-sudo singularity build --force stack.sif stack.def
+sudo singularity build --force stack.sif stack_conda.def
 ```
 
 Or download the ``stack.sif`` image file from Cloud Library with:

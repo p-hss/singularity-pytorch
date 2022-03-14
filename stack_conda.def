@@ -28,10 +28,11 @@ From: pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
 	conda create --name myenv
 
 	# install packages
+	conda install -c conda-forge dask-labextension
 	conda install -c conda-forge basemap 
 	conda install -c conda-forge ipywidgets
 	conda install -c conda-forge jupyterlab
-	conda install -c conda-forge nodejs 
+	conda install -c conda-forge nodejs
 	conda install -c conda-forge numpy 
 	conda install -c conda-forge pandas
 	conda install -c conda-forge pysteps 
@@ -40,22 +41,21 @@ From: pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
 	conda install -c conda-forge xarray
 	conda install -c conda-forge xclim
 	conda install -c conda-forge zarr
+	conda install -c conda-forge jupyter-resource-usage
+ 	conda install -c conda-forge guppy3 
 	conda install captum -c pytorch
-	conda install dask
 	conda install matplotlib
 	conda install netcdf4 
-	conda install numba
 	conda install scikit-image
 	conda install scikit-learn
 	conda install scipy 
 	conda install seaborn
- 	conda install pandas
- 	conda install xarray
+	conda install torchvision>=0.5.0 -c pytorch 
 	
 	conda install pip 
 	pip install jupyterlab_vim
 	pip install pytorch-lightning
+	pip install dask-labextension
   
 
-%runscript
 

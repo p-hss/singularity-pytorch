@@ -1,0 +1,32 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%help
+	Deep Learning software stack 
+
+
+%labels
+	AUTHOR_NAME Philipp Hess
+	AUTHOR_EMAIL hess@pik-potsdam.de
+	VERSION 1.0
+
+%files
+	environment.yaml /
+
+%environment
+	export LC_ALL=C
+
+%post
+	export PATH="/opt/conda/bin:$PATH"
+
+    	conda create -n singularity
+	conda install -n singularity pytorch torchvision cudatoolkit=10.2 -c pytorch
+	conda env update -n singularity -f /environment.yaml
+
+    	jupyter labextension install -y --clean \
+    	    @jupyter-widgets/jupyterlab-manager \
+    	    dask-labextension
+
+%runscript
+    exec /opt/conda/envs/singularity/bin/"$@"
+

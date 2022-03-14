@@ -1,0 +1,34 @@
+name: singularity
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+    - ipython
+    - pytorch::captum
+    - conda-forge::basemap 
+    - conda-forge::dask-labextension
+    - conda-forge::guppy3 
+    - conda-forge::ipywidgets
+    - conda-forge::jupyter-resource-usage
+    - conda-forge::jupyterlab
+    - conda-forge::matplotlib
+    - conda-forge::netcdf4 
+    - conda-forge::nodejs 
+    - conda-forge::numpy 
+    - conda-forge::pandas
+    - conda-forge::pysteps 
+    - conda-forge::scikit-image
+    - conda-forge::scikit-learn
+    - conda-forge::scipy 
+    - conda-forge::seaborn
+    - conda-forge::tensorboard 
+    - conda-forge::tqdm 
+    - conda-forge::xarray
+    - conda-forge::xclim
+    - conda-forge::zarr
+    - pip
+    - pip:
+          - jupyterlab_vim
+          - pytorch-lightning
+          - dask-labextension

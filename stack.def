@@ -19,13 +19,19 @@ From: continuumio/miniconda3
 %post
 	export PATH="/opt/conda/bin:$PATH"
 
+	apt update
+	apt install -y build-essential
+ 	conda update conda
     	conda create -n singularity
-	conda install -n singularity pytorch torchvision cudatoolkit=10.2 -c pytorch
 	conda env update -n singularity -f /environment.yaml
+	/opt/conda/envs/singularity/bin/pip install --extra-index-url https://developer.download.nvidia.com/compute/redist --upgrade nvidia-dali-cuda102
 
-    	jupyter labextension install -y --clean \
-    	    @jupyter-widgets/jupyterlab-manager \
-    	    dask-labextension
+	conda list -n singularity
+
+    	#/opt/conda/envs/singularity/bin/jupyter labextension install -y --clean \
+    	#    @jupyter-widgets/jupyterlab-manager \
+    	#    dask-labextension
+
 
 %runscript
     exec /opt/conda/envs/singularity/bin/"$@"

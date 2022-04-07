@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - cupy
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=1_llvm
   - absl-py=1.0.0=pyhd8ed1ab_0

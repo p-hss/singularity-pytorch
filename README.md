@@ -10,10 +10,10 @@ Follow the instructions [here](https://singularity-tutorial.github.io/) to insta
 
 ## How to use
 
-Build a container from the ``stack_conda.def`` definition file:
+Build a container from the ``stack.def`` definition file:
 
 ```
-sudo singularity build --force stack.sif stack_conda.def
+sudo singularity build --force stack.sif stack.def
 ```
 
 Or download the ``stack.sif`` image file from Cloud Library with:
@@ -30,7 +30,7 @@ singularity exec --nv ./stack.sif python test.py
 Start jupyterlab:
 
 ```
-singularity exec --nv ./stack.sif jupyter lab
+singularity run --nv ./stack.sif jupyter lab
 ```
 
 ## Customize
